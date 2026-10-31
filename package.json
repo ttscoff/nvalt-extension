@@ -1,0 +1,10 @@
+{
+  "name": "nvalt-browser-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Send a page or selection to nvALT.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
