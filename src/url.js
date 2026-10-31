@@ -31,3 +31,5 @@ if (typeof globalThis !== "undefined") {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { buildMarkdownifyURL: buildMarkdownifyURL };
 }
+// Firefox clones the injected file's result. A function cannot be cloned.
+void 0;

@@ -17,7 +17,7 @@ test("chrome and firefox builds expose Send to nvALT", function () {
   assert.deepEqual(chrome.permissions.sort(), ["activeTab", "scripting", "storage"]);
   assert.equal(firefox.name, "Send to nvALT");
   assert.equal(firefox.manifest_version, 2);
-  assert.deepEqual(firefox.permissions.sort(), ["activeTab", "storage"]);
+  assert.deepEqual(firefox.permissions.sort(), ["<all_urls>", "activeTab", "storage"]);
   assert.equal(firefox.browser_specific_settings.gecko.id, "send-to-nvalt@elasticthreads.net");
 
   var popup = fs.readFileSync(path.join(root, "dist/chrome/popup.html"), "utf8");

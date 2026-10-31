@@ -6,33 +6,44 @@ function withActiveTab(callback) {
   });
 }
 
+function manifestHas(permission) {
+  var manifest = chrome.runtime.getManifest();
+  var permissions = (manifest && manifest.permissions) || [];
+  return permissions.indexOf(permission) !== -1;
+}
+
+function injectOne(tabId, file, callback) {
+  function finish() {
+    var error = chrome.runtime.lastError;
+    callback(error ? error.message : null);
+  }
+  if (manifestHas("scripting") && chrome.scripting && chrome.scripting.executeScript) {
+    chrome.scripting.executeScript({ target: { tabId: tabId }, files: [file] }, finish);
+    return;
+  }
+  if (chrome.tabs && chrome.tabs.executeScript) {
+    chrome.tabs.executeScript(tabId, { file: file }, finish);
+    return;
+  }
+  callback("Cannot inject a script into this page.");
+}
+
 function injectFiles(tabId, files, callback) {
   var index = 0;
-  function next() {
+  function next(error) {
+    if (error) {
+      callback(error);
+      return;
+    }
     if (index >= files.length) {
-      callback(true);
+      callback(null);
       return;
     }
     var file = files[index];
     index += 1;
-    function afterInject() {
-      if (chrome.runtime.lastError) {
-        callback(false);
-        return;
-      }
-      next();
-    }
-    if (chrome.scripting && chrome.scripting.executeScript) {
-      chrome.scripting.executeScript({ target: { tabId: tabId }, files: [file] }, afterInject);
-      return;
-    }
-    if (chrome.tabs && chrome.tabs.executeScript) {
-      chrome.tabs.executeScript(tabId, { file: file }, afterInject);
-      return;
-    }
-    callback(false);
+    injectOne(tabId, file, next);
   }
-  next();
+  next(null);
 }
 
 function sendTabMessage(tabId, message, callback) {
@@ -51,7 +62,9 @@ function ensureContentScript(tabId, callback) {
       callback(true);
       return;
     }
-    injectFiles(tabId, INJECT_FILES, callback);
+    injectFiles(tabId, INJECT_FILES, function (error) {
+      callback(!error, error);
+    });
   });
 }
 
@@ -64,9 +77,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       sendResponse({ ok: false, error: "No active tab." });
       return;
     }
-    ensureContentScript(tab.id, function (ready) {
+    ensureContentScript(tab.id, function (ready, error) {
       if (!ready) {
-        sendResponse({ ok: false, error: "This page cannot be scripted." });
+        sendResponse({ ok: false, error: error || "This page cannot be scripted." });
         return;
       }
       sendTabMessage(tab.id, {
