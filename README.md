@@ -1,7 +1,7 @@
 # Send to nvALT
 
 A browser extension that sends the current page, the selection, or chosen
-blocks to nvALT as Markdown.
+blocks to [nvALT](https://brettterpstra.com/projects/nvalt) as Markdown. These are based on the [Marked browser extensions](https://markedapp.com/extensions).
 
 ## Approved Extensions
 
