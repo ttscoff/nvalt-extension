@@ -5,7 +5,19 @@ blocks to [nvALT](https://brettterpstra.com/projects/nvalt) as Markdown. These a
 
 ## Approved Extensions
 
-The Safari version of this is shipping with nvALT. The Chrome and Firefox extensions are being submitted for approval. This page will be updated with links when they're available.
+The Safari version ships with nvALT. The Chrome and Firefox extensions are being submitted for approval. This page will be updated with links when they're available.
+
+When available, the Firefox extension will be at <https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/>
+
+To turn on the Safari extension:
+
+1. Open nvALT so macOS can register the extension with Safari.
+2. In Safari, choose Safari > Settings > Extensions.
+3. Select **Send to nvALT** and turn it on.
+4. Allow access to the websites you want to send. The extension needs access to the page you are viewing so it can read the page, the selection, or the blocks you choose.
+
+If **Send to nvALT** does not appear in the list, quit Safari and open it again.
+
 
 ## Build
 
