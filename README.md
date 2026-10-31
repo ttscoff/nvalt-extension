@@ -3,6 +3,10 @@
 A browser extension that sends the current page, the selection, or chosen
 blocks to nvALT as Markdown.
 
+## Approved Extensions
+
+The Safari version of this is shipping with nvALT. The Chrome and Firefox extensions are being submitted for approval. This page will be updated with links when they're available.
+
 ## Build
 
 ```bash
