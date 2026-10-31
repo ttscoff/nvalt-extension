@@ -4,7 +4,10 @@
   "private": true,
   "description": "Send a page or selection to nvALT.",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "build:chrome": "node scripts/build.js chrome",
+    "build:firefox": "node scripts/build.js firefox",
+    "build": "npm run build:chrome && npm run build:firefox"
   },
   "license": "MIT"
 }
