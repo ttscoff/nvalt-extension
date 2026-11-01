@@ -5,9 +5,17 @@ blocks to [nvALT](https://brettterpstra.com/projects/nvalt) as Markdown. These a
 
 ## Approved Extensions
 
-The Safari version ships with nvALT. The Chrome and Firefox extensions are being submitted for approval. This page will be updated with links when they're available.
+The Safari version ships with nvALT. The Firefox extension is waiting for approval.
 
-When available, the Firefox extension will be at <https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/>
+### Firefox/Zen
+
+When available, the Firefox/Zen extension will be at <https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/>
+
+### Chrome/Chromium/Brave
+
+The Chrome/Chromium/Brave extension is ready and available at <https://chromewebstore.google.com/detail/send-to-nvalt/ojlofdmnooclkpekhldohicpdoojnnbh>
+
+### Safari
 
 To turn on the Safari extension:
 
