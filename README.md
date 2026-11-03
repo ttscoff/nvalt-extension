@@ -5,15 +5,15 @@ blocks to [nvALT](https://brettterpstra.com/projects/nvalt) as Markdown. These a
 
 ## Approved Extensions
 
-The Safari version ships with nvALT. The Firefox extension is waiting for approval.
+The Safari version ships with nvALT. The Firefox and Chrome extensions are installed from their respective directories.
 
 ### Firefox/Zen
 
-When available, the Firefox/Zen extension will be at <https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/>
+Install in Firefox, Zen, or compatible browser from [The Firefox Add-ons directory](https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/).
 
 ### Chrome/Chromium/Brave
 
-The Chrome/Chromium/Brave extension is ready and available at <https://chromewebstore.google.com/detail/send-to-nvalt/ojlofdmnooclkpekhldohicpdoojnnbh>
+Install in Chrome, Brave or any Chromium browser from the [Chrome Web Store](https://chromewebstore.google.com/detail/send-to-nvalt/ojlofdmnooclkpekhldohicpdoojnnbh).
 
 ### Safari
 
