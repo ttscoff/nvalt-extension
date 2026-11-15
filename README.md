@@ -5,15 +5,47 @@ blocks to [nvALT](https://brettterpstra.com/projects/nvalt) as Markdown. These a
 
 ## Approved Extensions
 
-The Safari version ships with nvALT. The Firefox and Chrome extensions are installed from their respective directories.
+Choose your browser. Chrome, Brave, and other Chromium browsers install from the Chrome Web Store. Firefox and Zen install from Mozilla Add-ons. Safari ships with nvALT.
 
-### Firefox/Zen
-
-Install in Firefox, Zen, or compatible browser from [The Firefox Add-ons directory](https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/).
-
-### Chrome/Chromium/Brave
-
-Install in Chrome, Brave or any Chromium browser from the [Chrome Web Store](https://chromewebstore.google.com/detail/send-to-nvalt/ojlofdmnooclkpekhldohicpdoojnnbh).
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <a href="https://chromewebstore.google.com/detail/send-to-nvalt/ojlofdmnooclkpekhldohicpdoojnnbh">
+        <img src="images/browsers/chrome.png" width="80" height="80" alt="Chrome"><br>
+        <b>Chrome</b><br>
+        Install from the Chrome Web Store
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/">
+        <img src="images/browsers/firefox.png" width="80" height="80" alt="Firefox"><br>
+        <b>Firefox</b><br>
+        Install from Mozilla Add-ons
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="#safari">
+        <img src="images/browsers/safari.png" width="80" height="80" alt="Safari"><br>
+        <b>Safari</b><br>
+        View setup instructions
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://chromewebstore.google.com/detail/send-to-nvalt/ojlofdmnooclkpekhldohicpdoojnnbh">
+        <img src="images/browsers/brave.png" width="80" height="80" alt="Brave"><br>
+        <b>Brave</b><br>
+        Install from the Chrome Web Store
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/send-to-nvalt/">
+        <img src="images/browsers/zen.png" width="80" height="80" alt="Zen"><br>
+        <b>Zen</b><br>
+        Install from Mozilla Add-ons
+      </a>
+    </td>
+  </tr>
+</table>
 
 ### Safari
 
